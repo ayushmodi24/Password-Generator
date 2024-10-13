@@ -1,0 +1,215 @@
+
+
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(87deg, rgba(24,41,49,1) 0%, rgba(173,193,194,1) 66%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(76,70,86,1) 100%);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+    color: #fff; /* White text */
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fff;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.display-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between; /* Aligns copy button to the right */
+    align-items: center;
+    position: relative;
+    padding-top: 0.35rem;
+    border-radius: 1rem;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+
+}
+
+.display {
+    width: 70%; /* Adjust width to accommodate copy button */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    color: #161414;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    
+}
+.display-container button {
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.input-container {
+    margin-bottom: 20px;
+    border-radius: 1rem;
+}
+
+.length-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.slider {
+    width: 100%;
+}
+
+.slider::-webkit-slider-thumb {
+    cursor: pointer;
+}
+
+/* .slider:focus{
+    outline: 3px solid black;
+} */
+
+/* .slider::-webkit-slider-thumb:hover{
+    outline: 2px solid black;
+    background-color: #28a745;
+} */
+
+
+slider::-webkit-slider-thumb {
+    position:relative;
+    z-index:1;
+    appearance: none;
+    height:2rem;
+    width:2rem;
+    border-radius: 50%;
+    background-color: var(--vb-black);
+    cursor:pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px rgba(21, 20, 18, 0.5);
+    transition: all 100ms ease-in;
+}
+
+.slider:focus{
+    outline: 3px solid var(--vb-black);
+}
+
+.slider::-webkit-slider-thumb:hover{
+    outline: 2px solid var(--vb-black);
+    background-color: var(--dk-black);
+    box-shadow: 0px 0px 15px 3px rgba(8, 8, 7, 0.8);
+}
+
+.copyBTn
+{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2); /* Larger checkboxes */
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: column; /* Align checkboxes in a column */
+    margin-bottom: 10px;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+
+}
+.check input {
+    appearance: none;
+    width: 13px;
+    height: 12px;
+    cursor: pointer;
+    position: relative;
+    border:1px solid cyan;
+    border-radius: 0.15rem;
+}
+.check input:checked::before {
+    content: '✓';
+    position: absolute;
+    color: #252725;
+    font-size:1.05rem ;
+    font-weight: 800;
+    left: 50%;
+    top: -3.5px;
+    transform: translateX(-40%) translateY(-20%);
+}
+
+.strength-container {
+    margin: 10px 0;
+}
+
+[data-indicator] {
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #f00; /* Default weak color */
+    margin: 5px 0;
+}
+
+[data-copyMsg] {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #28a745; /* Green for copied message */
+    display: none; /* Hidden by default */
+}
+
+[data-copy] {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+[data-copy] img {
+    transition: transform 0.2s;
+}
+
+[data-copy]:hover img {
+    transform: scale(1.1);
+}
